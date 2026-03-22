@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ashish Kumar | Aesthetic Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:#020617;color:#e2e8f0;overflow-x:hidden}
+
+/* NAVBAR */
+nav{
+position:fixed;top:0;width:100%;
+display:flex;justify-content:space-between;align-items:center;
+padding:15px 8%;
+background:rgba(15,23,42,0.6);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,0.05);
+z-index:1000;
+}
+nav h2{color:#38bdf8}
+nav a{color:#cbd5f5;margin-left:20px;text-decoration:none;transition:0.3s}
+nav a:hover{color:#38bdf8}
+
+/* HERO */
+header{
+height:100vh;
+display:flex;flex-direction:column;justify-content:center;align-items:center;
+text-align:center;
+padding-top:60px;
+background:radial-gradient(circle at top,#0f172a,#020617);
+}
+
+header h1{font-size:60px;font-weight:700}
+header span{color:#38bdf8}
+
+.subtitle{
+margin-top:15px;
+font-size:18px;
+color:#94a3b8;
+animation:fadeUp 1.5s ease;
+}
+
+.btn{
+margin-top:25px;
+padding:12px 30px;
+border-radius:30px;
+border:none;
+background:linear-gradient(135deg,#38bdf8,#6366f1);
+color:#fff;
+cursor:pointer;
+transition:0.4s;
+}
+.btn:hover{transform:scale(1.1)}
+
+/* SECTION */
+section{padding:90px 10%;text-align:center}
+
+h2{
+font-size:32px;
+margin-bottom:30px;
+color:#38bdf8;
+}
+
+/* GLASS CARD */
+.card{
+background:rgba(30,41,59,0.4);
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+border-radius:20px;
+padding:25px;
+margin:15px;
+transition:0.4s;
+}
+.card:hover{transform:translateY(-10px)}
+
+/* SKILLS */
+.skills{display:flex;flex-wrap:wrap;justify-content:center}
+.skill{
+padding:10px 20px;
+margin:10px;
+border-radius:20px;
+background:rgba(56,189,248,0.1);
+border:1px solid rgba(56,189,248,0.3);
+transition:0.3s;
+}
+.skill:hover{background:#38bdf8;color:#000}
+
+/* PROJECTS */
+.projects{display:flex;flex-wrap:wrap;justify-content:center}
+.project{
+width:280px;
+overflow:hidden;
+}
+.project img{
+width:100%;border-radius:15px;
+}
+
+/* CONTACT */
+.contact a{
+display:block;
+margin:10px;
+color:#38bdf8;
+text-decoration:none;
+transition:0.3s;
+}
+.contact a:hover{transform:scale(1.1)}
+
+/* FOOTER */
+footer{
+padding:20px;
+text-align:center;
+background:#020617;
+border-top:1px solid rgba(255,255,255,0.05);
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(20px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+@media(max-width:768px){
+header h1{font-size:40px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>Ashish</h2>
+<div>
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<header>
+<h1>Hi, I'm <span>Ashish Kumar</span></h1>
+<p class="subtitle">Full Stack Developer • Clean UI • Modern Web</p>
+<button class="btn" onclick="scrollToSection('contact')">Hire Me</button>
+</header>
+
+<section id="about">
+<h2>About Me</h2>
+<div class="card">
+<p>I build aesthetic, modern and fast websites with smooth UI/UX. Passionate about coding and creating premium web experiences.</p>
+</div>
+</section>
+
+<section>
+<h2>Skills</h2>
+<div class="skills">
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">React</div>
+<div class="skill">Node.js</div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="projects">
+<div class="card project">
+<img src="https://source.unsplash.com/400x300/?website">
+<p>Portfolio Website</p>
+</div>
+<div class="card project">
+<img src="https://source.unsplash.com/400x300/?coding">
+<p>Web App</p>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<h2>Contact</h2>
+<a href="mailto:ashishkumar2832t80jm@gmail.com">📧 Gmail</a>
+<a href="https://www.instagram.com/mr._.ashish10x" target="_blank">📸 Instagram</a>
+<a href="https://github.com/your-github-username" target="_blank">💻 GitHub</a>
+</section>
+
+<footer>
+<p>© 2026 Ashish Kumar</p>
+</footer>
+
+<script>
+function scrollToSection(id){
+document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
